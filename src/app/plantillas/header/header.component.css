@@ -1,0 +1,11 @@
+header{
+    background-color: black;
+    height: 3.5rem;
+}
+
+header nav{
+    text-align: center;
+    position: relative;
+    top: 1rem;
+    color: white;
+}

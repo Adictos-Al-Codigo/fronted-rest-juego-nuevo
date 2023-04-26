@@ -8,6 +8,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './vista/dashboard/dashboard.component';
 import { InterceptorService } from './interceptors/interceptor.service';
+import { HeaderComponent } from './plantillas/header/header.component';
+import { FooterComponent } from './plantillas/footer/footer.component';
 
 
 
@@ -16,7 +18,9 @@ import { InterceptorService } from './interceptors/interceptor.service';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    routingComponents
+    routingComponents,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
