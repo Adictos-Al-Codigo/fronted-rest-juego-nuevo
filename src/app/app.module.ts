@@ -10,6 +10,7 @@ import { DashboardComponent } from './vista/dashboard/dashboard.component';
 import { InterceptorService } from './interceptors/interceptor.service';
 import { HeaderComponent } from './plantillas/header/header.component';
 import { FooterComponent } from './plantillas/footer/footer.component';
+import { NuevoComponent } from './vista/nuevo/nuevo.component';
 
 
 
@@ -20,7 +21,8 @@ import { FooterComponent } from './plantillas/footer/footer.component';
     DashboardComponent,
     routingComponents,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NuevoComponent
   ],
   imports: [
     BrowserModule,

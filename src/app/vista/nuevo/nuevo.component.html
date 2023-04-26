@@ -1,0 +1,82 @@
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Registrar Jugador</h3>
+                    <p>Comprueba que los datos enviados sean correctos.</p>
+                    <form class="requires-validation" novalidate [formGroup]="form">
+
+                        <div class="col-md-12">
+                           <input formControlName="nombre_jugador" class="form-control" type="text" placeholder="Nombre de Jugador" required>
+                        </div>
+
+                        <div class="alert alert-primary" role="alert"
+                        *ngIf="form.get('nombre_jugador')?.touched && form.get('nombre_jugador')?.errors?.['required']">
+                        Campo Obligatorio
+                        </div>
+
+                        <div class="col-md-12">
+                            <select class="form-select mt-3" required formControlName="posicion_jugador">
+                                <option selected disabled value="">Posición de Jugador</option>
+                                <option value="Portero">Portero</option>
+                                <option value="Inferior Derecho">Interior Derecho</option>
+                                <option value="Central Derecho">Central Derecho</option>
+                                <option value="Central Izquierdo">Central Izquierdo</option>
+                                <option value="Lateral Izquierdo">Lateral Izquierdo</option>
+                                <option value="Mediocentro Derecho">Mediocentro Derecho</option>
+                                <option value="Mediocentro izquierdo">Mediocentro Izquierdo</option>
+                                <option value="Mediopunta">Medio Punta</option>
+                                <option value="Interior Derecho">Interior Derecho</option>
+                                <option value="Interior Izquierdo">Interior Izquierdo</option>
+                                <option value="Delantero">Delantero</option>
+                            </select>
+                        </div>
+
+                        <div class="alert alert-primary" role="alert"
+                        *ngIf="form.get('posicion_jugador')?.touched && form.get('posicion_jugador')?.errors?.['required']">
+                        Campo Obligatorio
+                        </div>
+
+
+                        <div class="col-md-12">
+                          <input class="form-control" formControlName="numero_jugador" type="text" placeholder="Número de Jugador" required>
+                        </div>
+
+                        <div class="alert alert-primary" role="alert"
+                        *ngIf="form.get('numero_jugador')?.touched && form.get('numero_jugador')?.errors?.['required']">
+                        Campo Obligatorio
+                        </div>
+
+                        <div class="form-outline form-white mb-4"  >
+                            <label class="form-label" for="typeEmailX">Elige un Equipo</label>
+                            <select class="form-select" aria-label="Default select example"  formControlName="id_equipo">
+                               <option  *ngFor="let item of nombre_equipo" value="{{item.id}}"> {{item.nombre_equipo}} 
+                               </option>
+                            </select>
+                        </div>
+  
+                        <div class="alert alert-primary" role="alert"
+                          *ngIf="form.get('id_equipo')?.touched && form.get('id_equipo')?.errors?.['required']">
+                          Campo Obligatorio
+                        </div>
+
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label">Doy Fé que la Información es Correcta.</label>
+                        </div>
+
+                        <div class="alert alert-danger" role="alert"
+                        *ngIf="error">
+                        Estas Enviando los Campos Vacíos.
+                        </div>
+
+                        <div class="form-button mt-3">
+                            <button id="submit" (click)="Guardar()" type="submit" class="btn btn-primary">Registar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

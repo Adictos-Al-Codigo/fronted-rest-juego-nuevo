@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiJuegoService } from 'src/app/servicios/data-api-juego.service';
 import { JugadoresI } from 'src/app/modelos/lista_jugadores.interface';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +10,7 @@ import { JugadoresI } from 'src/app/modelos/lista_jugadores.interface';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  constructor(private dataApiJuegoService:DataApiJuegoService) {
+  constructor(private dataApiJuegoService:DataApiJuegoService, private router:Router) {
      
   }
 
@@ -24,5 +26,9 @@ export class DashboardComponent implements OnInit {
         debugger;
       }
     })
+  }
+
+  NuevoJugador(){
+    this.router.navigate(['Nuevo']);
   }
 }

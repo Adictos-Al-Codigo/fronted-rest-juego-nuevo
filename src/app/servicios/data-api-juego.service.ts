@@ -24,4 +24,22 @@ export class DataApiJuegoService {
     return this.httpClient.get<JugadoresI[]>(direccion);
     debugger;
   }
+
+  getAllNameTeam():Observable<any>{
+    let direccion = this.url_api + "equipo"
+    return this.httpClient.get<any>(direccion);
+  }
+
+  saveJugador(form:any){
+    let data = new FormData();
+
+    let direccion = this.url_api + "jugador";
+
+    data.append('nombre_jugador',form.nombre_jugador.toString());
+    data.append('posicion_jugador',form.posicion_jugador.toString());
+    data.append('numero_jugador',form.numero_jugador.toString());
+    data.append('id_equipo',form.id_equipo.toString());
+
+    return this.httpClient.post<any>(direccion,data);
+  }
 }
