@@ -4,6 +4,7 @@ import { LoginI } from '../modelos/login.interface';
 import { Observable } from 'rxjs'
 import { ResponseI } from '../modelos/response.interface';
 import { JugadoresI } from '../modelos/lista_jugadores.interface';
+import { JugadorI } from '../modelos/jugador.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,6 @@ export class DataApiJuegoService {
   getAllJugadors():Observable<JugadoresI[]>{
     let direccion = this.url_api + "jugador";
     return this.httpClient.get<JugadoresI[]>(direccion);
-    debugger;
   }
 
   getAllNameTeam():Observable<any>{
@@ -41,5 +41,15 @@ export class DataApiJuegoService {
     data.append('id_equipo',form.id_equipo.toString());
 
     return this.httpClient.post<any>(direccion,data);
+  }
+
+  getJugador(id:number):Observable<JugadorI>{
+    let direccion = this.url_api + "jugador/" + id;
+    return this.httpClient.get<JugadorI>(direccion);
+  }
+
+  updated_jugador(form:JugadorI,id:string):Observable<JugadorI>{
+    let direccion = this.url_api + "jugador/" + id;
+    return this.httpClient.put<JugadorI>(direccion,form);
   }
 }

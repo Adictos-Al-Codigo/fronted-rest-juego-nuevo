@@ -31,4 +31,9 @@ export class DashboardComponent implements OnInit {
   NuevoJugador(){
     this.router.navigate(['Nuevo']);
   }
+
+  Edit(id:number){
+    this.router.navigate(['Edit',id]);
+  }
+
 }

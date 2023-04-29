@@ -11,6 +11,8 @@ import { InterceptorService } from './interceptors/interceptor.service';
 import { HeaderComponent } from './plantillas/header/header.component';
 import { FooterComponent } from './plantillas/footer/footer.component';
 import { NuevoComponent } from './vista/nuevo/nuevo.component';
+import { EditComponent } from './vista/edit/edit.component';
+
 
 
 
@@ -22,7 +24,8 @@ import { NuevoComponent } from './vista/nuevo/nuevo.component';
     routingComponents,
     HeaderComponent,
     FooterComponent,
-    NuevoComponent
+    NuevoComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

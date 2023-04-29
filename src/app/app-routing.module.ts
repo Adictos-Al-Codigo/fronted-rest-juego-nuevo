@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './vista/login/login.component';
 import { DashboardComponent } from './vista/dashboard/dashboard.component';
 import { NuevoComponent } from './vista/nuevo/nuevo.component';
+import { EditComponent } from './vista/edit/edit.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: "Nuevo",
     component: NuevoComponent
+  },
+  {
+    path: "Edit/:id",
+    component: EditComponent
   }
 ];
 
@@ -28,4 +33,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent,DashboardComponent, NuevoComponent];
+export const routingComponents = [LoginComponent,DashboardComponent, NuevoComponent, EditComponent];
