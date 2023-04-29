@@ -36,4 +36,15 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['Edit',id]);
   }
 
+  Eliminar_Jugador(id:number){
+    this.dataApiJuegoService.eliminated_player(id).subscribe({
+      next: (s) =>{
+        location.reload();
+      },
+      error: (err) =>{
+        debugger;
+      }
+    })
+  }
+
 }

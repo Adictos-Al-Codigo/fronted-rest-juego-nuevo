@@ -52,4 +52,9 @@ export class DataApiJuegoService {
     let direccion = this.url_api + "jugador/" + id;
     return this.httpClient.put<JugadorI>(direccion,form);
   }
+
+  eliminated_player(id:number){
+    let direccion = this.url_api + "jugador/" + id;
+    return this.httpClient.delete(direccion);
+  }
 }
