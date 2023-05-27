@@ -12,6 +12,11 @@ import { HeaderComponent } from './plantillas/header/header.component';
 import { FooterComponent } from './plantillas/footer/footer.component';
 import { NuevoComponent } from './vista/nuevo/nuevo.component';
 import { EditComponent } from './vista/edit/edit.component';
+import { RegistrarseComponent } from './vista/registrarse/registrarse.component';
+import { EquipoComponent } from './vista/equipo/equipo.component';
+import { JugadorComponent } from './vista/jugador/jugador.component';
+import { RegistrarseEComponent } from './vista/registrarse-e/registrarse-e.component';
+import { NuevoEComponent } from './vista/nuevo-e/nuevo-e.component';
 
 
 
@@ -26,6 +31,11 @@ import { EditComponent } from './vista/edit/edit.component';
     FooterComponent,
     NuevoComponent,
     EditComponent,
+    RegistrarseComponent,
+    EquipoComponent,
+    JugadorComponent,
+    RegistrarseEComponent,
+    NuevoEComponent,
   ],
   imports: [
     BrowserModule,

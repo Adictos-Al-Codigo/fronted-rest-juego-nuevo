@@ -1,0 +1,58 @@
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Actualizar Jugador</h3>
+                    <p>Comprueba que los datos enviados sean correctos.</p>
+                    <form class="requires-validation" novalidate [formGroup]="editForm">
+
+                        <div class="col-md-12">
+                           <input formControlName="nombre_equipo" class="form-control" type="text" placeholder="Nombre de Equipo" required>
+                        </div>
+
+
+                        <div class="alert alert-primary" role="alert"
+                        *ngIf="editForm.get('nombre_equipo')?.touched && editForm.get('nombre_equipo')?.errors?.['required']">
+                        Campo Obligatorio
+                        </div>
+
+
+                        <div class="col-md-12">
+                          <input class="form-control" formControlName="nombre_director_equipo" type="text" placeholder="Nombre de Director Equipo" required>
+                        </div>
+
+                        <div class="alert alert-primary" role="alert"
+                        *ngIf="editForm.get('nombre_director_equipo')?.touched && editForm.get('nombre_director_equipo')?.errors?.['required']">
+                        Campo Obligatorio
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" formControlName="logo_equipo" type="text" placeholder="Nombre de Director Equipo" required>
+                        </div>
+  
+                        <div class="alert alert-primary" role="alert"
+                          *ngIf="editForm.get('logo_equipo')?.touched && editForm.get('lgoo_equipo')?.errors?.['required']">
+                          Campo Obligatorio
+                        </div>
+  
+
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label">Doy Fé que la Información es Correcta.</label>
+                        </div>
+
+                        <div class="alert alert-danger" role="alert"
+                        *ngIf="error">
+                        Estas Enviando los Campos Vacíos.
+                        </div> 
+
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" (click)="actualizar_jugador(editForm.value)" class="btn btn-primary">Actualizar Jugador</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,11 @@ import { LoginComponent } from './vista/login/login.component';
 import { DashboardComponent } from './vista/dashboard/dashboard.component';
 import { NuevoComponent } from './vista/nuevo/nuevo.component';
 import { EditComponent } from './vista/edit/edit.component';
-
+import { RegistrarseComponent } from './vista/registrarse/registrarse.component';
+import { JugadorComponent } from './vista/jugador/jugador.component';
+import { EquipoComponent } from './vista/equipo/equipo.component';
+import { RegistrarseEComponent } from './vista/registrarse-e/registrarse-e.component';
+import { NuevoEComponent } from './vista/nuevo-e/nuevo-e.component';
 
 const routes: Routes = [
   {
@@ -25,6 +29,26 @@ const routes: Routes = [
   {
     path: "Edit/:id",
     component: EditComponent
+  },
+  {
+    path: "Registrarse",
+    component: RegistrarseComponent
+  },
+  {
+    path: "Jugador",
+    component: JugadorComponent
+  },
+  {
+    path: "Equipo",
+    component: EquipoComponent
+  },
+  {
+    path: "Registrarse/Equipo",
+    component: RegistrarseEComponent
+  },
+  {
+    path: "Edit/Equipo/:id",
+    component: NuevoEComponent
   }
 ];
 
@@ -33,4 +57,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent,DashboardComponent, NuevoComponent, EditComponent];
+export const routingComponents = [LoginComponent,DashboardComponent, NuevoComponent, EditComponent, RegistrarseComponent, RegistrarseEComponent, NuevoEComponent];

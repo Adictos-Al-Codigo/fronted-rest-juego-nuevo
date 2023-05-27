@@ -1,0 +1,17 @@
+table{
+    position: relative;
+    top: 4.5rem;
+    left: 2rem;
+    width: 80rem;
+    text-align: center;
+}
+
+.columns svg{
+    margin: 0 .3rem;
+}
+
+.btn{
+    position: relative;
+    left: -1rem;
+    top: 2rem;
+}

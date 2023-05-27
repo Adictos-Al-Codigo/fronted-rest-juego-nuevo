@@ -40,7 +40,7 @@ export class EditComponent {
         })
       },
       error: (err) =>{
-        ;
+        debugger;
       }
     })
 

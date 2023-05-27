@@ -1,17 +1,13 @@
-table{
+.card-jugador{
     position: relative;
-    top: 4.5rem;
-    left: 2rem;
-    width: 80rem;
     text-align: center;
+    top: 65px;
+    left: 330px;
 }
 
-.columns svg{
-    margin: 0 .3rem;
-}
-
-.btn{
+.card-equipo{
     position: relative;
-    left: -1rem;
-    top: 2rem;
+    text-align: center;
+    top: -260px;
+    left: 750px;
 }
